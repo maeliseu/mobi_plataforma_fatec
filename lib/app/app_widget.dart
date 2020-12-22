@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:mobi_plataforma_fatec/app/constants/constant.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -8,7 +9,10 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'Flutter Slidy',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: kBackgroundColor,
+        primaryColor: kPrimaryColor,
+        primaryColorDark: kPrimaryColorDark,
+        // primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,

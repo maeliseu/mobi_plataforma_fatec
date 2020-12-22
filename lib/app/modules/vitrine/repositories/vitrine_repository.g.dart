@@ -7,7 +7,7 @@ part of 'vitrine_repository.dart';
 // **************************************************************************
 
 final $VitrineRepository = BindInject(
-  (i) => VitrineRepository(i<DioForNative>()),
+  (i) => VitrineRepository(i<Dio>()),
   singleton: true,
   lazy: true,
 );

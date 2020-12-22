@@ -24,7 +24,7 @@ vars:
     runner: flutter pub run build_runner
 scripts: 
     mobx_build: $runner build
-    mobx_watch: $clean & $get & $runner watch
+    mobx_watch: $clean & $get & $runner watch --delete-conflicting-outputs
     mobx_build_clean: $clean & $get & $runner build --delete-conflicting-outputs
 
 
