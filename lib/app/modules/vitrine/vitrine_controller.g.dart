@@ -34,6 +34,20 @@ mixin _$VitrineController on _VitrineControllerBase, Store {
     });
   }
 
+  final _$_VitrineControllerBaseActionController =
+      ActionController(name: '_VitrineControllerBase');
+
+  @override
+  void refresh() {
+    final _$actionInfo = _$_VitrineControllerBaseActionController.startAction(
+        name: '_VitrineControllerBase.refresh');
+    try {
+      return super.refresh();
+    } finally {
+      _$_VitrineControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''

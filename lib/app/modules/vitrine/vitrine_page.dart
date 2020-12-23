@@ -21,9 +21,13 @@ class _VitrinePageState extends State<VitrinePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title), actions: [
+        IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: () {
+              vitrineController.refresh();
+            })
+      ]),
       body: Observer(builder: (_) {
         if (vitrineController.listvitrine.error != null) {
           return Center(child: Text('Erro'));

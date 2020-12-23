@@ -24,7 +24,7 @@ class _CategoriasPageState extends State<CategoriasPage> {
       appBar: AppBar(
         title: Text(widget.title),
         bottom: PreferredSize(
-          preferredSize: Size.square(28.0),
+          preferredSize: Size.square(50.0),
           child: Padding(
             padding: const EdgeInsets.only(bottom: 8),
             child: Row(

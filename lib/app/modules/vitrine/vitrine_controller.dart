@@ -18,8 +18,8 @@ abstract class _VitrineControllerBase with Store {
     listvitrine = repository.getAll().asObservable();
   }
 
-  // @action
-  // void increment() {
-  //   value++;
-  // }
+  @action
+  void refresh() {
+    listvitrine = repository.getAll().asObservable();
+  }
 }
