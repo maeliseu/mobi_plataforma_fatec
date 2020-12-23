@@ -30,20 +30,49 @@ class _CategoriasPageState extends State<CategoriasPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                RaisedButton(
-                  onPressed: () {
-                    print('emprego press');
-                    categoriasController.emprego();
-                  },
-                  child: new Text("Emprego"),
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    print('estagio press');
-                    categoriasController.estagio();
-                  },
-                  child: new Text("Estágio"),
-                ),
+                //
+                //
+                Observer(builder: (_) {
+                  return RaisedButton(
+                    elevation: 5,
+                    color: kPrimaryColorDark,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(18.0),
+                      side: BorderSide(
+                          color: (categoriasController.opcao == '0')
+                              ? Colors.red
+                              : kPrimaryColorDark),
+                    ),
+                    onPressed: () {
+                      categoriasController.emprego();
+                    },
+                    child: new Text("Emprego"),
+                  );
+                }),
+
+                //
+                //
+                Observer(builder: (_) {
+                  return RaisedButton(
+                    elevation: 5,
+                    color: kPrimaryColorDark,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(18.0),
+                      side: BorderSide(
+                          color: (categoriasController.opcao == '1')
+                              ? Colors.red
+                              : kPrimaryColorDark),
+                    ),
+                    onPressed: () {
+                      categoriasController.estagio();
+                    },
+                    child: new Text("Estágio"),
+                  );
+                }),
+                //
+                //
               ],
             ),
           ),
