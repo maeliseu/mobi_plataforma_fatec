@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:dio/native_imp.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobi_plataforma_fatec/app/model/vitrine_model.dart';
 import 'interfaces/vitrine_repository_interface.dart';
